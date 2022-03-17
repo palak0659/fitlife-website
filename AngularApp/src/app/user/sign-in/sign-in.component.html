@@ -1,0 +1,47 @@
+
+  <!DOCTYPE HTML>
+
+  <html>
+    <head>
+      <title>{{FITLIFE}}</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      
+    </head>
+    <body class="is-preload">
+        <section id="footer">
+          <div class="container">
+            <header class="major">
+              <h2>SIGN-IN</h2>
+            </header>
+            <form  #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" required/></div>
+                <div class="col-6 col-12-xsmall"> <input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="Email" [pattern]="emailRegex" required
+                                  [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }"></div>
+                                  <div *ngIf="signInForm.submitted && email.errors?.pattern">
+                                      <label class="validation-message">Invalid email address.</label>
+                                    </div>
+                              <div class="col-6 col-12-xsmall">   <input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" placeholder="Password" required minlength="4"
+                                  [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }"></div>
+                                  <div *ngIf="signInForm.submitted && password.errors?.minlength">
+                                      <label class="validation-message">Minimum 4 characters.</label>
+                                    </div>
+                <div class="col-12">
+                  <ul class="actions special">
+                    <li><input type="submit" value="SIGN-IN" class="primary" /></li>
+                  </ul>
+                </div>
+                <p>Do not  have an account <a href="signup">Sign up</a></p>
+              </div>
+            </form>
+            <div class="alert" *ngIf="serverErrorMessages">
+              {{serverErrorMessages}}
+            </div> 
+          </div>
+    
+        </section>
+  
+      
+    </body>
+  </html>

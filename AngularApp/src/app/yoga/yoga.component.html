@@ -1,0 +1,196 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Freelancer - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+      
+    </head>
+<body>
+
+
+
+		<!-- HEADER -->
+		<header>
+		
+			<!-- header wrapper -->
+			<div class="wrapper cf">
+				<div id="logo">
+					<a href="index.html" ><img src="../assets/images/images.png" alt="" /></a>
+				</div>
+			</div><!-- ENDS header wrapper -->
+			
+			
+			
+			<!-- nav -->
+			<nav class="cf">
+				<div class="wrapper cf">
+					<ul id="nav" class="sf-menu">
+						<li class="current-menu-item"><a href="userprofile">HOME<i><b></b></i></a></li>
+						<li><a href="bellyfat">YOGA_BELLYFAT<i><b></b></i></a></li>
+						<li><a href="tigh">YOGA_TIGHS<i><b></b></i></a></li>
+						<li><a href="asthma">YOGA_ASTHMA<i><b></b></i></a></li>
+						<li><a href="diabetes">YOGA_DIABETES<i><b></b></i></a></li>
+					
+					</ul>
+					
+				</div>
+			</nav>
+			<!-- ends nav -->
+				
+		</header>
+
+	<!-- ENDS HEADER -->
+	
+	
+	<!-- MAIN -->
+	<div role="main" id="main">
+		<div class="wrapper">
+		
+		<!-- <div class="slider-frame">
+			<div class="slide-images">
+				<div class="img-container">
+					<img src="assets/images/aasan.jpg">
+				</div>
+				<div class="img-container">
+					<img src="assets/images/cal.jpg">
+				</div>
+				<div class="img-container">
+					<img src="assets/images/dietitian.jpg">
+				</div>
+			</div>
+		</div>
+		 -->
+	    <div class="slider">
+			<div class="slides">
+			  <!--radio buttons start-->
+			  <input type="radio" name="radio-btn" id="radio1">
+			  <input type="radio" name="radio-btn" id="radio2">
+			  <input type="radio" name="radio-btn" id="radio3">
+			  <input type="radio" name="radio-btn" id="radio4">
+			  <input type="radio" name="radio-btn" id="radio5">
+			  
+			  <!--radio buttons end-->
+			  <!--slide images start-->
+			  <div class="slide first">
+				<img src="assets/images/aasan.jpg" alt="">
+			  </div>
+			  <div class="slide">
+				<img src="assets/images/cal.jpg" alt="">
+			  </div>
+			  <div class="slide">
+				<img src="assets/images/dietitian.jpg" alt="">
+			  </div>
+			  <div class="slide">
+				<img src="assets/images/yoga.jpg" alt="">
+			  </div>
+			 
+			  <!--slide images end-->
+			  <!--automatic navigation start-->
+			  <div class="navigation-auto">
+				<div class="auto-btn1"></div>
+				<div class="auto-btn2"></div>
+				<div class="auto-btn3"></div>
+				<div class="auto-btn4"></div>
+			
+			  </div>
+			  <!--automatic navigation end-->
+			</div>
+			<!--manual navigation start-->
+			<div class="navigation-manual">
+			  <label for="radio1" class="manual-btn"></label>
+			  <label for="radio2" class="manual-btn"></label>
+			  <label for="radio3" class="manual-btn"></label>
+			  <label for="radio4" class="manual-btn"></label>
+			
+			</div>
+			<!--manual navigation end-->
+		</div>
+		<!-- headline -->
+		<div class="headline">
+			ENJOY    YOGA !!!
+		</div>
+		<!-- ENDS headline -->
+		
+			
+	 	
+		<ul *ngFor="let fli of yogaService.yogas; index as i"  id="filter-container-feature" class="feature">
+			<li >
+
+				<div class="thumb" ><img src="assets/images/{{fli.name}}.jpeg"  />
+					<div class="date"><span class="d">{{i+1}}</span></div>
+				</div>
+			 	<div class="caption">
+
+					 {{fli.name}}
+					 <br>
+					 {{fli.description}}
+					 <br>
+					 <a>{{fli.link}}</a>
+				</div>	
+			
+			</li>
+	
+		</ul>
+	
+
+	 	 <!-- ENDS feature -->
+	  
+	  
+	  </div>
+	</div>
+	<!-- ENDS MAIN -->
+	
+	
+	<footer>
+	
+		<!-- wrapper -->
+		<div class="wrapper cf">
+		
+		
+			<!-- social -->
+			<div class="sb-holder cf">
+				<!-- <ul id="social-bar" class="cf">
+					<li class="left-corner"><i></i></li>
+					<li><a href="http://www.facebook.com"  title="Become a fan" ><img src="img/social/Facebook.png"  alt="Facebook" /></a></li>
+					<li><a href="http://www.twitter.com" title="Follow my tweets" ><img src="img/social/Twitter.png"  alt="twitter" /></a></li>
+					<li><a href="http://www.google.com"  title="Add to the circle" ><img src="img/social/Google+.png" alt="Google plus" /></a></li>
+					
+					<li class="right-corner"><i></i></li>
+				</ul> -->
+				
+				
+			</div> 
+			<!-- ENDS social -->
+			
+	
+			<br>
+			<br>
+			
+			<div id="footer-bottom">Developer: Palak Talwar <a href="https://github.com/palak0659?tab=repositories" ></a></div>
+		
+			
+		</div><!-- ENDS wrapper -->
+		
+		
+		
+
+	</footer>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	
+	
+	
+
+</body>
+</html>

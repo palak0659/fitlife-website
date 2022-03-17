@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+        <meta name="author" content="" />
+  <title>FITLIFE</title>
+  <base href="/">
+
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script>
+        new WOW().init();
+  </script>
+
+  <script>
+    $(document).ready(function() {
+        $("#starting-slider").owlCarousel({
+          autoPlay: 3000,
+            navigation : false, // Show next and prev buttons
+            slideSpeed : 700,
+            paginationSpeed : 1000,
+            singleItem:true
+        });
+    });
+  </script>
+
+
+  <script>
+    $( function() {
+        // init Isotope
+        var $container = $('.isotope').isotope
+        ({
+          itemSelector: '.element-item',
+          layoutMode: 'fitRows'
+        });
+
+
+        // bind filter button click
+        $('#filters').on( 'click', 'button', function() 
+        {
+          var filterValue = $( this ).attr('data-filter');
+          // use filterFn if matches value
+          $container.isotope({ filter: filterValue });
+       });
+
+      // change is-checked class on buttons
+        $('.button-group').each( function( i, buttonGroup ) 
+        {
+          var $buttonGroup = $( buttonGroup );
+          $buttonGroup.on( 'click', 'button', function() 
+          {
+              $buttonGroup.find('.is-checked').removeClass('is-checked');
+              $( this ).addClass('is-checked');
+          });
+        });
+      
+    });
+  </script>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="assets/js/modernizr-2.5.3.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+ 
+		
+  <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600' rel='stylesheet' type='text/css'>
+  
+  
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+
+<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/owl.transitions.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"> 
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin="" />
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+crossorigin=""></script>
+<link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <app-root></app-root>
+ <script src="assets/js/main.js"></script>
+ <script src="assets/js/go.js"></script>
+	<!-- JavaScript at the bottom for fast page loading -->
+	
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/jquery-1.7.1.min.js"><\/script>')</script>
+	
+	<!-- scripts concatenated and minified via build script -->
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/slider.js"></script>
+	<!-- superfish -->
+	<script  src="assets/js/superfish-1.4.8/js/hoverIntent.js"></script>
+	<script  src="assets/js/superfish-1.4.8/js/superfish.js"></script>
+	<script  src="assets/js/superfish-1.4.8/js/supersubs.js"></script>
+	<!-- ENDS superfish -->
+	
+	<script src="assets/js/tweet/jquery.tweet.js" ></script>
+	<script src="assets/js/jquery.isotope.min.js"></script>
+	<script src="assets/js/jquery.nivo.slider.js" ></script>
+	<script src="assets/js/css3-mediaqueries.js"></script>
+	<script src="assets/js/tabs.js"></script>
+	<script  src="assets/js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+
+
+  <script  src="assets/js/jquery.min.js"></script>
+  <script  src="assets/js/owl.carousel.min.js"></script>
+  <script  src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script>
+        new WOW().init();
+  </script>
+
+  <script>
+    $(document).ready(function() {
+        $("#starting-slider").owlCarousel({
+          autoPlay: 3000,
+            navigation : false, // Show next and prev buttons
+            slideSpeed : 700,
+            paginationSpeed : 1000,
+            singleItem:true
+        });
+    });
+  </script>
+
+
+  <script>
+    $( function() {
+        // init Isotope
+        var $container = $('.isotope').isotope
+        ({
+          itemSelector: '.element-item',
+          layoutMode: 'fitRows'
+        });
+
+
+        // bind filter button click
+        $('#filters').on( 'click', 'button', function() 
+        {
+          var filterValue = $( this ).attr('data-filter');
+          // use filterFn if matches value
+          $container.isotope({ filter: filterValue });
+       });
+
+      // change is-checked class on buttons
+        $('.button-group').each( function( i, buttonGroup ) 
+        {
+          var $buttonGroup = $( buttonGroup );
+          $buttonGroup.on( 'click', 'button', function() 
+          {
+              $buttonGroup.find('.is-checked').removeClass('is-checked');
+              $( this ).addClass('is-checked');
+          });
+        });
+      
+    });
+  </script>
+</body>
+
+
+</html>

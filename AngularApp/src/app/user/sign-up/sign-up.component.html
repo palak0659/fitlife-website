@@ -1,0 +1,70 @@
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>{{FITLIFE}}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+	</head>
+	<body class="is-preload">
+
+
+		
+			<section id="login">
+				<div class="container">
+					<header class="major">
+						<h2>LOGIN FITLIFE</h2>
+					</header>
+					<form  #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall"><input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.fullName" name="fullName" placeholder="Full Name"
+                required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }"></div>
+                <div *ngIf="signUpForm.submitted && !fullName.valid">
+                  <label class="validation-message">This field is required.</label>
+                </div> 
+							<div class="col-6 col-12-xsmall"><input type="text" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" placeholder="Email"
+                required [pattern]="emailRegex"  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }"></div>
+                <div *ngIf="signUpForm.submitted && email.errors">
+                  <label *ngIf="email.errors.required" class="validation-message">This field is required.</label>
+                  <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+                </div>
+              <div class="col-6 col-12-xsmall"><input type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+                minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }"></div>
+                <div *ngIf="signUpForm.submitted && password.errors">
+                  <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+                  <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+                </div>
+							<div class="col-6 col-12-xsmall"><input type="text" #age="ngModel" [(ngModel)]="userService.selectedUser.age" name="age" placeholder="Age"
+                required ></div>
+                <div class="col-6 col-12-xsmall"><input type="text" #address="ngModel" [(ngModel)]="userService.selectedUser.address" name="address" placeholder="Address"
+                  required ></div>
+                  <div class="col-6 col-12-xsmall"><input type="text" #city="ngModel" [(ngModel)]="userService.selectedUser.city" name="city" placeholder="City"
+                    required ></div>
+                    <div class="col-6 col-12-xsmall"><input type="text" #state="ngModel" [(ngModel)]="userService.selectedUser.state" name="state" placeholder="State"
+                      required ></div>
+							<div class="col-12">
+								<ul class="actions special">
+									<li><input type="submit" value="SUBMIT" class="primary" /></li>
+								</ul>
+							</div>
+							<p>Already have an account <a href="signin">Sign in</a></p>
+						</div>
+					</form>
+				</div>
+        <!-- Success message -->
+<div class="success" *ngIf="showSucessMessage">
+  Saved successfully
+</div>
+
+<!-- Error message -->
+<div class="alert" *ngIf="serverErrorMessages">
+  {{serverErrorMessages}}
+</div>
+
+			</section>
+
+		
+	</body>
+</html>

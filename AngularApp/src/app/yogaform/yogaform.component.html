@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col s5">
+             
+             <form #yogaForm="ngForm" (ngSubmit)="onSubmit(yogaForm)" >
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="yogaService.selectedYoga._id">
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Name of Yoga Form :
+                    <label class="red-text">*</label>
+                  </label>
+                 
+                  <input type="text" name="name" #Name="ngModel" [(ngModel)]="yogaService.selectedYoga.name" placeholder="Enter the information " required>
+               
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Description :
+                    <label class="red-text">*</label>
+                  </label>
+                  <input type="text" name="description" #Description="ngModel" [(ngModel)]="yogaService.selectedYoga.description" placeholder="Enter the information " required>
+                
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Reference link :
+                    <label class="red-text">*</label>
+                  </label>
+                  <input type="text" name="link" #link="ngModel" [(ngModel)]="yogaService.selectedYoga.link" placeholder="Enter the information " required>
+                
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Purpose :
+                    <label class="red-text">*</label>
+                  </label>
+                  <input type="text" name="purpose" #link="ngModel" [(ngModel)]="yogaService.selectedYoga.purpose" placeholder="Enter the information " required>
+                
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+               
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn btn-custom right" type="button" (click)="resetForm(yogaForm)">Reset</button>
+                  <button class="btn btn-custom right" type="submit" [disabled]="!yogaForm.valid">Submit</button>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+            </form> 
+          </div>
+          <div class="col s7">
+              <table class="responsive-table highlight">
+                  <thead>
+                    <tr>
+                      <th>Description</th>
+      
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let fli of yogaService.yogas">
+                    <td>{{fli.description}}</td>
+                   
+                    <td>
+                        <a class="action-btn" (click)="onEdit(fli)">
+                          <i class="material-icons">edit</i>
+                        </a>
+                        <a class="action-btn" (click)="onDelete(fli._id,yogaForm)">
+                          <i class="material-icons">delete</i>
+                        </a>
+                      </td>
+                  </tr>
+                </table>
+          </div>
+        </div>
+      </div>
+     </div> 
+  </div>
+
+</div> 

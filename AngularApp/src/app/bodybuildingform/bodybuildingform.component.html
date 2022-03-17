@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col s5">
+             
+             <form #bodyForm="ngForm" (ngSubmit)="onSubmit(bodyForm)" >
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="bodybuildingService.selectedBody._id">
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Name :
+                    <label class="red-text">*</label>
+                  </label>
+                 
+                  <input type="text" name="name" #Name="ngModel" [(ngModel)]="bodybuildingService.selectedBody.name" placeholder="Enter the information " required>
+               
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Description :
+                    <label class="red-text">*</label>
+                  </label>
+                  <input type="text" name="description" #Description="ngModel" [(ngModel)]="bodybuildingService.selectedBody.description" placeholder="Enter the information " required>
+                
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Reference link :
+                    <label class="red-text">*</label>
+                  </label>
+                  <input type="text" name="link" #link="ngModel" [(ngModel)]="bodybuildingService.selectedBody.link" placeholder="Enter the information " >
+                
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Purpose :
+                    <label class="red-text">*</label>
+                  </label>
+                  <input type="text" name="purpose" #link="ngModel" [(ngModel)]="bodybuildingService.selectedBody.purpose" placeholder="Enter the information " required>
+                
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+               
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn btn-custom right" type="button" (click)="resetForm(bodyForm)">Reset</button>
+                  <button class="btn btn-custom right" type="submit" [disabled]="!bodyForm.valid">Submit</button>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+            </form> 
+          </div>
+          <div class="col s7">
+              <table class="responsive-table highlight">
+                  <thead>
+                    <tr>
+                      <th>Description</th>
+      
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let fli of bodybuildingService.bodys">
+                    <td>{{fli.description}}</td>
+                   
+                    <td>
+                        <a class="action-btn" (click)="onEdit(fli)">
+                          <i class="material-icons">edit</i>
+                        </a>
+                        <a class="action-btn" (click)="onDelete(fli._id,bodyForm)">
+                          <i class="material-icons">delete</i>
+                        </a>
+                      </td>
+                  </tr>
+                </table>
+          </div>
+        </div>
+      </div>
+     </div> 
+  </div>
+
+</div> 

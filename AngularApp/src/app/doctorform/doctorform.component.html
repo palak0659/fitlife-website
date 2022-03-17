@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col s5">
+             
+             <form #doctorForm="ngForm" (ngSubmit)="onSubmit(doctorForm)" >
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="doctorService.selectedDoctor._id">
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Doctor's Name :
+                    <label class="red-text">*</label>
+                  </label>
+                 
+                  <input type="text" name="name" #Name="ngModel" [(ngModel)]="doctorService.selectedDoctor.name" placeholder="Enter the information " required>
+               
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Information :
+                    <label class="red-text">*</label>
+                  </label>
+                 
+                  <input type="text" name="description" #Name="ngModel" [(ngModel)]="doctorService.selectedDoctor.description" placeholder="Enter the information " required>
+               
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Address :
+                    <label class="red-text">*</label>
+                  </label>
+                 
+                  <input type="text" name="address" #Name="ngModel" [(ngModel)]="doctorService.selectedDoctor.address" placeholder="Enter the information " required>
+               
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <label>Phone Number :
+                    <label class="red-text">*</label>
+                  </label>
+                 
+                  <input type="text" name="contact" #Name="ngModel" [(ngModel)]="doctorService.selectedDoctor.contact" placeholder="Enter the information " required>
+               
+                </div>
+              </div>
+              
+               
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn btn-custom right" type="button" (click)="resetForm(doctorForm)">Reset</button>
+                  <button class="btn btn-custom right" type="submit" [disabled]="!doctorForm.valid">Submit</button>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+            </form> 
+          </div>
+          <div class="col s7">
+              <table class="responsive-table highlight">
+                  <thead>
+                    <tr>
+                      <th>Description</th>
+      
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tr *ngFor="let fli of doctorService.doctors">
+                    <td>{{fli.description}}</td>
+                   
+                    <td>
+                        <a class="action-btn" (click)="onEdit(fli)">
+                          <i class="material-icons">edit</i>
+                        </a>
+                        <a class="action-btn" (click)="onDelete(fli._id,doctorForm)">
+                          <i class="material-icons">delete</i>
+                        </a>
+                      </td>
+                  </tr>
+                </table>
+          </div>
+        </div>
+      </div>
+     </div> 
+  </div>
+
+</div> 

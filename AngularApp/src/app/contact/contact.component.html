@@ -1,0 +1,145 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Freelancer - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+      
+    </head>
+<body>
+
+
+
+		<!-- HEADER -->
+		<header>
+		
+			<!-- header wrapper -->
+			<div class="wrapper cf">
+				<div id="logo">
+					<a href="index.html" ><img src="../assets/images/images.png" alt="" /></a>
+				</div>
+			</div><!-- ENDS header wrapper -->
+			
+			
+			
+			<!-- nav -->
+			<nav class="cf">
+				<div class="wrapper cf">
+					<ul id="nav" class="sf-menu">
+						<li class="current-menu-item"><a href="userprofile">HOME<i><b></b></i></a></li>
+						<li><a href="yoga">YOGA<i><b></b></i></a></li>
+						<li><a href="supplement">SUPPLEMENTS<i><b></b></i></a></li>
+						<li><a href="portfolio.html">CALORIES<i><b></b></i></a></li>
+						<li><a href="contact">CONTACT<i><b></b></i></a></li>
+					
+					</ul>
+					
+				</div>
+			</nav>
+			<!-- ends nav -->
+				
+		</header>
+
+	<!-- ENDS HEADER -->
+	
+	<!-- MAIN -->
+	<div role="main" id="main">
+		<div class="wrapper">
+		
+			<!-- page-content -->
+			<div class="page-content">
+				
+				
+			
+				<h2 class="heading">**CONTACT US**</h2>
+				<!-- form -->
+				<form id="contactForm" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" >
+					<fieldset>
+														
+					  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="contactService.selectedFlight._id">
+          <p>
+              <span>Name:</span>
+              <input type="text"  name="Name" #Name="ngModel" [(ngModel)]="contactService.selectedFlight.Name" placeholder="Enter the information" required>
+              
+    
+            </p>
+          <p>
+              <span>Email:</span>
+              <input type="text" name="Email" #Price="ngModel" [(ngModel)]="contactService.selectedFlight.Email" placeholder="Enter the information" required>
+              
+            
+            </p>
+            <p>
+              <span>Message:</span>
+              <input type="text" name="Message" #Message="ngModel" [(ngModel)]="contactService.selectedFlight.Message" placeholder="Enter the information" required>
+              
+            </p>
+              <div class="row">
+              <div class="input-field col s12">
+                <button class="button1" type="button" (click)="resetForm(contactForm)">Reset</button>
+                &nbsp;
+                &nbsp;
+                <button class="button1" type="submit" [disabled]="!contactForm.valid">Submit</button>
+              </div>
+              </div>
+					</fieldset>
+					
+				</form>
+
+				<!-- ENDS form -->	
+				<div class="c-1"></div>
+				<div class="c-2"></div>
+				<div class="c-3"></div>
+				<div class="c-4"></div>
+			</div><!-- ENDS page-content -->
+			
+	  
+	  
+	  </div>
+	</div>
+	<!-- ENDS MAIN -->
+	
+	
+	<footer>
+	
+		<!-- wrapper -->
+		<div class="wrapper cf">
+		
+		
+			<!-- social -->
+	
+			<!-- ENDS social -->
+			
+			
+<br>
+<br>
+			
+			
+<div id="footer-bottom">Developer: Palak Talwar <a href="https://github.com/palak0659?tab=repositories" ></a></div>
+		
+		
+			
+		</div><!-- ENDS wrapper -->
+		
+		
+		
+
+	</footer>
+
+
+</body>
+</html>
