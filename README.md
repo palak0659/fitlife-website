@@ -30,12 +30,14 @@ DIET PLAN
 ![image](https://user-images.githubusercontent.com/83232454/173204295-e9aa6e00-1bcb-4a98-8fc3-8d051f7ea497.png)
 TALK TO EXPERT
 ![image](https://user-images.githubusercontent.com/83232454/173204331-e78c4f73-a205-400b-bee0-ec35384206a9.png)
+GYM LOCATION TRACE
 ![image](https://user-images.githubusercontent.com/83232454/173204398-10164dcb-23db-4653-9d1e-e7426a938ae6.png)
 
 
 FUTURE AIM TO INCLUDE:
 
 I want to add the feature that if someone is doing yoga wrong the website can detect it and can diplay the right method 
+
 And I can add a feature of live lectures of the trainer
 
 
